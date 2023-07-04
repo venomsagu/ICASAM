@@ -205,8 +205,18 @@ p {
 }
 @media (max-width: 920px) {
   .layer h4 {
-    display: none;
+    position: relative;
+    top: 4px;
+    left: 30px;
+    font-size: 14px;
   }
+
+  .layer img {
+    top: 15px;
+    height: 60px;
+    width: 70px;
+  }
+
   .Commitee {
     height: 120vh;
   }
