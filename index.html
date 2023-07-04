@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="css/card.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    
+    <!-- navbar design -->
+    <nav>
+      <div class="logo">Brand</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#Commitee">Commitee</a></li>
+        <li><a href="call-for-papers.html">Submmision</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+    
+
+<!-- slider images section -->
+
+<section class="hero-anime">
+    <div class="slider">
+      <img src="images/slider images/home_1.png" alt="Image 1" />
+      <img src="images/slider images/home_2_3.jpg" alt="Image 2" />
+      <img src="images/slider images/home_6_6.jpg" alt="Image 3" />
+      <div class="slider__marks"></div>
+      <button class="slider__prev" onclick="prevImage()">&#8249;</button>
+      <button class="slider__next" onclick="nextImage()">&#8250;</button>
+    </div>
+    </div>
+
+    <div class="time-clock">
+      <div class="countdown">
+        <div class="countdown-item">
+          <span id="days">0</span>
+          <span>Days</span>
+        </div>
+        <div class="countdown-item">
+          <span id="hours">0</span>
+          <span>Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span id="minutes">0</span>
+          <span>Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span id="seconds">0</span>
+          <span>Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- banner images -->
+  <div class="power">
+    <img src="images/ICAMFM-header.png" alt="Banner/Header image" />
+    <div class="overlay1">
+      <h3>Powered by © ICAMFM 2023. All rights reserved.</h3>
+    </div>
+  </div>
+
+  <!-- section to display the speakers persone -->
+
+ 
+  <div class="Speakers-text"><h1>SPEAKERS</h1></div>
+
+    <div class="slide-container swiper">
+      <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile1.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile2.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile3.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile4.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile5.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile6.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile7.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile8.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <span class="overlay"></span>
+
+              <div class="card-image">
+                <img src="images/profile9.jpg" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content">
+              <h2 class="name">David Dell</h2>
+              <p class="description">
+                The lorem text the section that contains header with having open
+                functionality. Lorem dolor sit amet consectetur adipisicing
+                elit.
+              </p>
+
+              <button class="button">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="Speakers-text"><h1>Commitee</h1></div>
+    <section class="Commitee" id="Commitee">
+      <img src="images/Group 3.svg" alt="" />
+    </section>
+
+    <section class="contact-details">
+      <br>
+      <br>
+      <br>
+      <hr>
+      <h1>Contact Details:</h1>
+      <div class="details">
+        
+        <div class="detils1">
+        <h3><b>Registration and general Enquery:</b></h3>
+        <p>Dr. D. Shivalingappa :<strong>9480472268</strong></p>
+        <p>Dr. S. Balasaraswathy : <strong>9538835130</strong></p>
+      </div>
+      <div class="details2">
+        <p style="font-size:18px;  font-weight:bold; padding-left: 10px;">
+          General Chair ICAMFM-2023:
+      </p>
+      <span> <a href="mailto:icamfm2023@bnmit.in">icamfm2023@bnmit.in</a></span>
+      </div>
+      </div>
+
+    </section>
+  
+    <!-- <div id="preloader">
+      <div id="preloader">
+          <img src="images/Infinity-1s-210px.svg" alt="Preloader" class="loader">
+      </div>
+         -->
+        <script src="js/index.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        
+  </body>
+</html>
