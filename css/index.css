@@ -7,6 +7,7 @@
 }
 body {
   padding-top: 80px;
+  overflow-x: hidden;
 }
 
 .loader {
@@ -189,6 +190,16 @@ p {
   .Commitee {
     height: 115vh;
   }
+  #image1 {
+    position: relative;
+    left: 0px;
+    width: 390px;
+  }
+  #image2 {
+    position: relative;
+    left: 10px;
+    width: 377px;
+  }
   .details {
     display: block;
     text-align: center;
@@ -241,12 +252,7 @@ p {
   }
   .Commitee > img {
     display: flex;
-
     align-items: center;
     justify-content: center;
-    position: relative;
-    left: 0px;
-    top: 90px;
-    width: 390px;
   }
 }
