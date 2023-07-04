@@ -151,7 +151,7 @@ input[type="checkbox"] {
 }
 
 .Commitee {
-  height: 320vh;
+  height: 630vh;
 }
 h1 {
   text-align: center;
@@ -194,8 +194,9 @@ p {
 }
 
 #image3 {
-  margin-top: px;
+  margin-top: 4px;
 }
+
 /* mobilepointview representation */
 
 @media (max-width: 1000px) {
@@ -204,6 +205,13 @@ p {
   }
 }
 @media (max-width: 920px) {
+  .contact-details {
+    height: 60vh;
+  }
+  .details1 > h3 {
+    font-weight: 100;
+  }
+
   .layer h4 {
     position: relative;
     top: 4px;
@@ -218,22 +226,31 @@ p {
   }
 
   .Commitee {
-    height: 120vh;
+    height: 230vh;
   }
   #image1 {
+    top: 20px;
     position: relative;
-    left: 0px;
-    width: 390px;
+    left: 18px;
+    width: 400px;
   }
   #image2 {
+    top: 25px;
     position: relative;
-    left: 10px;
-    width: 377px;
+    left: 30px;
+    width: 400px;
   }
   #image3 {
+    top: 25px;
     position: relative;
-    width: 377px;
-    left: 10px;
+    width: 400px;
+    left: 30px;
+  }
+  #image4 {
+    top: 25px;
+    position: relative;
+    width: 400px;
+    left: 30px;
   }
   .details {
     display: block;
@@ -241,6 +258,10 @@ p {
   }
   .details2 a {
     padding: 10px;
+  }
+  .details3 > p {
+    position: relative;
+    left: 0px;
   }
   .overlay1 h3 {
     font-size: 7.4px;
