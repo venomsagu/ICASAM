@@ -111,7 +111,7 @@ footer {
 }
 .right form .btn button {
   height: 40px;
-  width: 100%;
+  width: 200%;
   border: none;
   outline: none;
   background: #f12020;
@@ -121,7 +121,7 @@ footer {
   transition: 0.3s;
 }
 .right form .btn button:hover {
-  background: #000;
+  background: rgb(153, 129, 129);
 }
 .bottom center {
   padding: 5px;
