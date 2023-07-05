@@ -654,7 +654,8 @@ footer {
   }
   .wrapper1 {
     position: absolute;
-    top: 9.9%;
+    z-index: 2;
+    top: 5.9%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
