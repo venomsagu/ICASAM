@@ -374,7 +374,7 @@ footer {
 }
 .size {
   position: relative;
-  height: 380vh !important;
+  height: 210vh !important;
 }
 .footer-distributed {
   background: #000;
@@ -559,7 +559,7 @@ footer {
   }
 
   .size {
-    height: 698vh !important;
+    height: 348vh !important;
   }
 
   .footer-distributed {
