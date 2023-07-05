@@ -648,7 +648,7 @@ h3 {
   .wrapper1 {
     position: absolute;
     z-index: 2;
-    top: 9.9%;
+    top: 8.9%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
