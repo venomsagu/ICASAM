@@ -1,6 +1,6 @@
 const downloadBtn = document.querySelector(".download-btn");
 const fileLink =
-  "https://tmsagarofficial.github.io/icamfm-bnmit23/Abstract-Template.docx";
+  "../Abstract-Template.docx";
 
 const initTimer = () => {
   if (downloadBtn.classList.contains("disable-timer")) {
