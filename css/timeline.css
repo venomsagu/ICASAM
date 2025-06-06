@@ -9,8 +9,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: #ff7979;
+  background-image: url('../images/2025/atom1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+
 ::selection {
   color: #fff;
   background: #ff7979;
@@ -40,12 +45,18 @@ body {
   justify-content: flex-end;
 }
 .wrapper .row section {
-  background: #fff;
+  background: #e3f2fd;
   border-radius: 5px;
   width: calc(50% - 40px);
   padding: 20px;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.wrapper .row section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
 .wrapper .row section::before {
   position: absolute;
   content: "";
@@ -142,4 +153,17 @@ body {
   .wrapper .row {
     margin: 10px 0;
   }
+}
+.phase-label {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #ff7979;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }

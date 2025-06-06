@@ -9,8 +9,8 @@
   height: 85px;
 }
 body {
-  overflow-x: hidden;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
+ 
 }
 html {
   scroll-behavior: smooth;
