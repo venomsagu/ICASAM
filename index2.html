@@ -364,7 +364,7 @@ body {
         }
 
         .leadership-content h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 10px;
             color: #0c4b6e;
             font-weight: 700;
@@ -473,8 +473,8 @@ body {
         /* Card Grid Styles */
         .committee-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 0.8fr));
+            gap: 10px;
         }
 
         .member-card {
@@ -557,7 +557,7 @@ body {
 
         .member-card h3 {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 8px;
             position: relative;
@@ -580,6 +580,67 @@ body {
             flex-direction: column;
             background: white;
         }
+        nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  height: 90px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+        .layer {
+  color: white;
+  font-size: 25px;
+}
+.layer h4 {
+  margin-bottom: 7px;
+}
+.layer img {
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 90px;
+  height: 75px;
+}
 
         .member-info {
             margin-bottom: 25px;
@@ -807,6 +868,25 @@ body {
             <p>Meet the distinguished members organizing the International Conference on Advanced Science and Applied Mathematics</p>
         </div>
     </header> -->
+        <!-- navbar design -->
+    <nav>
+      <div class="layer">
+        <span
+          ><img src="images/logo1.png" alt="logo" />
+          <h4>BNM INSTITUTE OF TECHNOLOGY</h4></span
+        >
+      </div>
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a  href="index.html">Home</a></li>
+        <li><a href="index2.html">Committee</a></li>
+        <li><a class="active" href="timeline.html">Timeline</a></li>
+        <li><a href="call-for-papers.html">Submission</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
 
     <div class="container">
         <!-- Leadership Section -->
@@ -1055,7 +1135,7 @@ body {
             <div class="section-title">
                 <div class="section-icon"><i class="fas fa-cogs"></i></div>
                 <h2 style="background: none !important; -webkit-background-clip: initial !important; -webkit-text-fill-color: rgb(255, 255, 255) !important; color: black !important;">
-  Technical Committee
+  Organizing Chair
 </h2>
 
 
