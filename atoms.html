@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: none;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: #e6e6e6;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 1000px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #4fc3f7, #29b6f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.8;
+            color: #bbdefb;
+        }
+        
+        .loader-container {
+            position: relative;
+            height: 400px;
+            margin: 2rem auto;
+            width: 100%;
+        }
+        
+        .atomic-system {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+        
+        /* Atoms */
+        .atom {
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        
+        .nucleus {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, rgba(79, 195, 247, 0.8) 0%, rgba(41, 182, 246, 0.6) 70%, transparent 100%);
+            box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        .electron {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(1, 54, 101, 0.9);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            width: 10px;
+            height: 10px;
+        }
+        
+        .orbit {
+            position: absolute;
+            border: 2px solid rgba(0, 21, 39, 0.3);
+            border-radius: 50%;
+        }
+        
+        /* Atom 1 - Hydrogen-like */
+        .atom-1 {
+            width: 120px;
+            height: 120px;
+            top: 50px;
+            left: 30%;
+        }
+        
+        .atom-1 .nucleus {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .atom-1 .orbit {
+            width: 100%;
+            height: 100%;
+            animation: rotate 8s linear infinite;
+        }
+        
+        .atom-1 .electron {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Atom 2 - Carbon-like */
+        .atom-2 {
+            width: 180px;
+            height: 180px;
+            top: 100px;
+            left: 60%;
+        }
+        
+        .atom-2 .nucleus {
+            width: 30px;
+            height: 30px;
+            animation-delay: 0.5s;
+        }
+        
+        .atom-2 .orbit-1 {
+            width: 100%;
+            height: 100%;
+            animation: rotate 12s linear infinite;
+        }
+        
+        .atom-2 .orbit-2 {
+            width: 70%;
+            height: 70%;
+            animation: rotate-reverse 10s linear infinite;
+        }
+        
+        .atom-2 .electron {
+            background: rgba(1, 54, 101, 0.9);
+        }
+        
+        .atom-2 .electron-1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .atom-2 .electron-2 {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .atom-2 .electron-3 {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        
+        .atom-2 .electron-4 {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        
+        /* Atom 3 - Oxygen-like */
+        .atom-3 {
+            width: 220px;
+            height: 220px;
+            bottom: 80px;
+            left: 20%;
+        }
+        
+        .atom-3 .nucleus {
+            width: 35px;
+            height: 35px;
+            animation-delay: 0.8s;
+        }
+        
+        .atom-3 .orbit-1 {
+            width: 100%;
+            height: 100%;
+            animation: rotate 15s linear infinite;
+        }
+        
+        .atom-3 .orbit-2 {
+            width: 80%;
+            height: 80%;
+            animation: rotate-reverse 13s linear infinite;
+        }
+        
+        .atom-3 .orbit-3 {
+            width: 60%;
+            height: 60%;
+            animation: rotate 10s linear infinite;
+        }
+        
+        .atom-3 .electron {
+            background: rgba(1, 54, 101, 0.9);
+        }
+        
+        .atom-3 .electron-1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .atom-3 .electron-2 {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .atom-3 .electron-3 {
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        
+        .atom-3 .electron-4 {
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        
+        .atom-3 .electron-5 {
+            top: 15%;
+            right: 15%;
+        }
+        
+        .atom-3 .electron-6 {
+            bottom: 15%;
+            left: 15%;
+        }
+        
+        /* Molecular Bonds */
+        .bond {
+            position: absolute;
+            background: rgba(187, 222, 251, 0.4);
+            box-shadow: 0 0 8px rgba(187, 222, 251, 0.3);
+            z-index: 5;
+        }
+/*         
+        .bond-1 {
+            width: 120px;
+            height: 2px;
+            top: 110px;
+            left: 38%;
+            transform: rotate(20deg);
+            animation: bond-pulse 2s infinite;
+        }
+        
+        .bond-2 {
+            width: 150px;
+            height: 2px;
+            top: 200px;
+            left: 45%;
+            transform: rotate(-15deg);
+            animation: bond-pulse 2s infinite 0.5s;
+        } */
+        
+        /* Floating Molecules */
+        .molecule {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(79, 195, 247, 0.15);
+            border: 1px solid rgba(187, 222, 251, 0.2);
+            backdrop-filter: blur(2px);
+            z-index: 2;
+        }
+        
+        .molecule-1 {
+            width: 40px;
+            height: 40px;
+            top: 50px;
+            right: 50px;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .molecule-2 {
+            width: 60px;
+            height: 60px;
+            bottom: 100px;
+            right: 80px;
+            animation: float 10s ease-in-out infinite 2s;
+        }
+        
+        .molecule-3 {
+            width: 30px;
+            height: 30px;
+            top: 150px;
+            left: 50px;
+            animation: float 7s ease-in-out infinite 1s;
+        }
+        
+        /* Loading Progress */
+        .progress-container {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 400px;
+            height: 8px;
+            background: rgba(187, 222, 251, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            z-index: 20;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, rgba(79, 195, 247, 0.8), rgba(41, 182, 246, 0.8));
+            border-radius: 4px;
+            animation: progress 4s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+        }
+        
+        /* Status Panel */
+        .status {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(41, 182, 246, 0.1);
+            border-radius: 12px;
+            border-left: 4px solid #4fc3f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .status i {
+            color: #4fc3f7;
+            font-size: 1.4rem;
+        }
+        
+        .status-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color:black
+        }
+        
+        /* Animations */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes rotate-reverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        
+        @keyframes bond-pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(0) translateX(20px); }
+            75% { transform: translateY(10px) translateX(10px); }
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 80%; }
+            100% { width: 100%; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1rem; }
+            .loader-container { height: 350px; }
+            .atom-1 { left: 20%; }
+            .atom-2 { left: 50%; }
+            .atom-3 { left: 15%; }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .loader-container { height: 300px; }
+            .atom-1 { width: 100px; height: 100px; top: 40px; left: 10%; }
+            .atom-2 { width: 150px; height: 150px; top: 80px; left: 45%; }
+            .atom-3 { width: 180px; height: 180px; bottom: 60px; left: 10%; }
+            .bond-1, .bond-2 { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader-container">
+            <div class="atomic-system">
+                <!-- Floating molecules -->
+                <div class="molecule molecule-1"></div>
+                <div class="molecule molecule-2"></div>
+                <div class="molecule molecule-3"></div>
+                
+                <!-- Atom 1 - Hydrogen-like -->
+                <div class="atom atom-1">
+                    <div class="nucleus"></div>
+                    <div class="orbit">
+                        <div class="electron"></div>
+                    </div>
+                </div>
+                
+                <!-- Atom 2 - Carbon-like -->
+                <div class="atom atom-2">
+                    <div class="nucleus"></div>
+                    <div class="orbit orbit-1">
+                        <div class="electron electron-1"></div>
+                        <div class="electron electron-2"></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="electron electron-3"></div>
+                        <div class="electron electron-4"></div>
+                    </div>
+                </div>
+                
+                <!-- Atom 3 - Oxygen-like -->
+                <div class="atom atom-3">
+                    <div class="nucleus"></div>
+                    <div class="orbit orbit-1">
+                        <div class="electron electron-1"></div>
+                        <div class="electron electron-2"></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="electron electron-3"></div>
+                        <div class="electron electron-4"></div>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <div class="electron electron-5"></div>
+                        <div class="electron electron-6"></div>
+                    </div>
+                </div>
+                
+                <!-- Molecular Bonds -->
+                <div class="bond bond-1"></div>
+                <div class="bond bond-2"></div>
+                
+                <!-- Loading Progress -->
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status">
+            <i class="fas fa-atom fa-spin"></i>
+            <span class="status-text">Welcome to ICASAM 2025....</span>
+        </div>
+    </div>
+</body>
+</html>

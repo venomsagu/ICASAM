@@ -16,26 +16,36 @@
     />
   </head>
   <body>
+      <div id="preloader">
+    <img src="images/loader.svg" class="loader">
+  </div>
     <!-- navbar design -->
-    <nav>
-      <div class="layer">
-        <span
-          ><img src="images/logo1.png" alt="logo" />
-          <h4>BNM INSTITUTE OF TECHNOLOGY</h4></span
-        >
-      </div>
-      <input type="checkbox" id="click" />
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-        <li><a  href="index.html">Home</a></li>
-        <li><a href="index2.html">Committee</a></li>
-        <li><a class="active" href="timeline.html">Timeline</a></li>
-        <li><a href="call-for-papers.html">Submission</a></li>
-        <li><a href="#contact">Contact us</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <!-- Left Logo -->
+    <div class="nav-logo left">
+      <img src="images/2025/logo1.png" alt="logo">
+      <h4>BNM INSTITUTE OF TECHNOLOGY</h4>
+    </div>
+
+    <!-- Navigation Links -->
+    <input type="checkbox" id="click" />
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index2.html">Committee</a></li>
+      <li><a class="active" href="timeline.html">Timeline</a></li>
+      <li><a href="call-for-papers.html">Submission</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ul>
+
+    <!-- Right Logo -->
+    <div class="nav-logo right">
+      <h4>ICASAM</h4>
+      <img src="images/2025/icasam.png" alt="icasam logo">
+    </div>
+  </nav>
 
     <div class="wrapper">
       <div class="center-line">
@@ -177,7 +187,7 @@
       <div class="bottom">
         <center>
           <span class="credit"
-            >Created By <a href="https://www.codingnepalweb.com">ICAMFBNM</a> |
+            >Created By <a href="">ICASAMBNM</a> |
           </span>
           <span class="far fa-copyright"></span
           ><span> 2025 All rights reserved.</span>
@@ -185,10 +195,6 @@
       </div>
     </footer>
 
-    <div id="preloader">
-        <div id="preloader">
-          <img src="images/Dual Ball-1s-200px (1).svg" alt="Preloader" class="loader">
-        </div>
 
     <script src="js/callforpaper.js"></script>
   </body>
