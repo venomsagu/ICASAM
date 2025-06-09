@@ -22,16 +22,34 @@
   <div id="preloader">
     <img src="images/loader.svg" class="loader">
   </div>
-  <!-- navbar design -->
-  <nav>
-    <!-- Left Logo -->
-    <div class="nav-logo left">
-      <img src="images/2025/logo1.png" alt="logo">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICASAM 2025</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  
+  <!-- Conference Header -->
+  <div class="conference-header">
+    <div class="header-logo left">
+      <img src="images/2025/logo1.png" alt="Left Logo">
     </div>
-
-    <!-- Navigation Links -->
-    <input type="checkbox" id="click" />
-
+    <div class="header-text">
+      <h1>International Conference on Applied Sciences and Advanced Materials</h1>
+      <p><strong style="font-family: 'Times New Roman', Times, serif;">Venue:</strong> BNMIT, Bengaluru | <strong style="font-family: 'Times New Roman', Times, serif;">Date:</strong> November 28–29, 2025</p>
+    </div>
+    <div class="header-logo right">
+      <img src="images/2025/icasam.png" alt="Right Logo">
+    </div>
+  </div>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <input type="checkbox" id="click">
     <ul class="nav-links">
       <li><a class="active" href="#">Home</a></li>
       <li><a href="index2.html">Committee</a></li>
@@ -39,17 +57,10 @@
       <li><a href="call-for-papers.html">Submission</a></li>
       <li><a href="#contact">Contact us</a></li>
     </ul>
-
-    <!-- Right Logo -->
-    <div class="nav-logo right">
-      <img src="images/2025/icasam.png" alt="icasam logo">
-    </div>
-        <label for="click" class="menu-btn">
+    <label for="click" class="menu-btn">
       <i class="fas fa-bars"></i>
     </label>
   </nav>
-
-
 
   <!-- slider images section -->
 
@@ -129,7 +140,7 @@
 
           <div class="card-content">
             <h2 class="name">Prof. R. Shabadi</h2>
-            <p classs="description">
+            <p class="description">
               Associate Professor<br>
               Universitede Lille <br>
               Villeneuve d'Ascq,France
@@ -305,172 +316,115 @@
     <div class="swiper-button-prev swiper-navBtn"></div>
     <div class="swiper-pagination"></div>
   </div>
-  <!--to be changed 
-    <section class="Commitee" id="Commitee">
-      <img src="images/Group 1 (9).svg" alt="image1" id="image1" />
-      <img src="images/Group 5 (2).svg" alt="image2" id="image2">
-      <img src="images/Group 3 (3).svg" alt="image3" id="image3">
-      <img src="images/Group 4 (1).svg" alt="image4" id="image3">
-      <img src="images/Organising (3).svg" alt="image5" id="image3">
-    </section>
-    -->
-  <section class="size">
-    <div class="contains">
+    <section class="about-section">
       <div class="auto-container">
-        <p class="sec-title text-left">
-        <h2><strong>About BNMIT</strong> </h2>
-        <br>
-        <div class="power">
-          <img src="images/clg.png" alt="Banner/Header image" />
+        <h2><strong>About BNMIT</strong></h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/clg.png" alt="BNMIT Campus">
+          </div>
+          <div class="about-text">
+            <p>
+              B N M Institute of Technology was established in 2001 and is among the top preferred technical institutes in Karnataka. BNMIT was granted Autonomous Status in June 2021 by UGC and VTU. Located in Banashankari, Bengaluru, the lush green campus offers a serene academic environment with easy accessibility to all essential facilities.
+            </p>
+            <p>
+              BNMIT offers undergraduate programs in Electronics & Communication, Electrical & Electronics, Computer Science, Information Science, Mechanical Engineering, and AI & ML, as well as PG programs in VLSI & Embedded Systems, CSE, and MBA.
+            </p>
+            <p>
+              The institute is accredited by NAAC with an 'A' Grade and all eligible UG programs are NBA-accredited. BNMIT is recognized by NIRF Innovation (150–300), holds a Diamond Rating by QS I-Gauge, and ranks 26<sup>th</sup> (TIME Survey), 34<sup>th</sup> (Outlook), and 40<sup>th</sup> (DataQuest).
+            </p>
+          </div>
         </div>
-        <br>
-        <p>
-
-          B N M Institute of Technology was established in the year 2001. It has achieved academic
-          laurels and is one of the top prefered institutes in technical education in Karnataka.
-          BNMIT has been granted Autonomous Status since June 2021 by UGC and VTU.
-          BNMIT, a lush green campus is located at Banashankari, Bengaluru, a quiet and well-known
-          locality with easy access to all essential facilities. BNMIT offers Engineering courses in
-          Electronics and Communication Engineering, Electrical and Electronics Engineering, Computer
-          Science and Engineering, Information Science and Engineering, Mechanical Engineering, and
-          Artificial Intelligence and Machine Learning (AIML). The institute also offers post graduate
-          programs in VLSI Design and Embedded systems, Computer Science & Engineering, and
-          Master's in Business Administration. The institute is accredited by NAAC with 'A' Grade and all
-          the eligible UG programmes are accredited by NBA, New Delhi. Department of Science &
-          Technology has funded Rs. 2.87 Crores towards New Gen Innovation and Entrepreneurship
-          Development Centre (IEDC). BNMIT has some more feathers on its cap; it’s ranked (150-300)
-          by NIRF INNOVATION-2025, Diamond Rating by QS I-Gauge, 26<sup>th</sup> Rank by TIME Survey,
-          34<sup>th</sup> Rank by Outlook and 40 <sup>th</sup> Rank by Data Quest.
-        </p>
-
-
-
-
       </div>
-      <br>
+    
       <div class="auto-container">
-        <p class="sec-title text-left">
-        <h2><strong>About the Conference</strong> </h2>
-        <br>
-        <p>
-          The International Conference on Advanced Materials and Fluid Mechanics is the premier forum
-          for the presentation of technological advances and research results in the fields of material
-          science and Computational Fluid Mechanics. It provides an international platform where
-          researchers, industry professionals, academicians, and students across the globe can present and
-          exchange innovative research ideas and build networks for further research collaboration. The
-          ICASAM-2025 will cover a range of topics, including Material Science, Nanotechnology,
-          Biomaterials, Composite Materials, Surface Engineering, Rheology, Fluid Mechanics, and many
-          more. This conference will focus on the invited talks on the latest areas, the presentation and
-          discussion of the most recent innovations, trends, and concerns, the practical challenges
-          encountered, and their relevance in Advanced Materials and Fluid Mechanics.
-
-        </p>
+        <h2><strong>About the Conference</strong></h2>
+        <div class="about-text">
+          <p>
+            The International Conference on Applied Sciences and Advanced Materials (ICASAM 2025) will unite researchers, academicians, and industry professionals to discuss breakthroughs in applied sciences and material technologies. Hosted by the Departments of Mechanical Engineering and Basic Sciences, ICASAM 2025 will emphasize topics like advanced materials, nanotech, sustainability, and innovation.
+          </p>
+          <p>
+            The event, scheduled for November 28–29, 2025, will feature keynote speeches, technical sessions, and networking opportunities, fostering global collaboration and innovation.
+          </p>
+        </div>
       </div>
-  </section>
-  <hr>
-  <section class="contact-details" id="contact">
-
-    <h1>Contact Details:</h1>
-    <div class="details">
-
-      <div class="detils1">
-        <h3>Technical Enquiries:</h3>
-        <p> General Chair ICASAM-2025:</p>
-        <p>Dr. B. S. Anil Kumar :<strong>9844463770</strong></p>
-        <p>Dr. K. N. N. Prasad : <strong>9448736843</strong></p>
-        <p>Dr. B. S. Prathibha : <strong>9686466499</strong></p>
-        <p>Dr. L. Venkata Reddy : <strong>9448768850</strong></p>
+    
+      <div class="auto-container bengaluru-info">
+        <h2><strong>About Bengaluru</strong></h2>
+        <div class="bengaluru-content">
+          <div class="bengaluru-image">
+            <img src="images/Bengaluru/bng1.jpg" alt="Bengaluru City">
+          </div>
+          <div class="bengaluru-text">
+            <p>
+              Bengaluru, known as the "Silicon Valley of India", is the capital of Karnataka and a hub for technology, startups, and education. The city blends tradition with modernity and offers a vibrant lifestyle.
+            </p>
+            <ul>
+              <li><strong>Climate:</strong> Pleasant throughout the year with mild summers and cool winters.</li>
+              <li><strong>Languages:</strong> Kannada (official), English, Hindi, and other regional languages are widely spoken.</li>
+              <li><strong>People:</strong> Warm, diverse, and culturally inclusive, Bengaluru welcomes individuals from all over India and abroad. Home to over 8 million residents and a metropolitan population exceeding 11 million, Bengaluru ranks as the third most populous city and the fifth-largest urban agglomeration in India.</li>
+              <li><strong>Transportation:</strong> Well-connected via BMTC buses, Namma Metro, cabs, autos, and trains. The Kempegowda International Airport connects the city globally.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <!-- <span><p>Mail id:</p> <a href="mailto:icamfm2023@bnmit.in">icamfm2023@bnmit.in</a></span> -->
+    </section>
+    
 
-      <br>
-      <div class="details3">
-        <h3>Registration and General Query</h3>
-        <p>Dr. Raghavendra N. :<strong>9844550048</strong></p>
-        <p>Dr. S. Balasaraswathy : <strong>9538835130</strong></p>
-        <p>Dr. Prashanth M. K. : <strong>9448231937</strong></p>
-        <p>Dr. N. P. Chandrashekara : <strong>9448537975</strong></p>
-      </div>
-    </div>
-    </div>
-
-  </section>
   <!-- Fotter Design -->
   <footer>
     <div class="main-content">
-      <div class="left box">
-        <h2>About us</h2>
+  
+      <!-- Technical Enquiries -->
+      <div class="box">
+        <h2>Technical Enquiries</h2>
         <div class="content">
-          <p>
-            <b>B N M Institute of Technology</b> was established in the year 2001. It has achieved academic
-            laurels and is one of the top prefered institutes in technical education in Karnataka.
-            BNMIT has been granted Autonomous Status since June 2021 by UGC and VTU.
-          </p>
-          <div class="social">
-            <a href="https://www.facebook.com/bnmitsocial"><span class="fab fa-facebook-f"></span></a>
-            <a href="#"><span class="fab fa-twitter"></span></a>
-            <a href="https://www.instagram.com/bnmitsocial/?hl=en"><span class="fab fa-instagram"></span></a>
-            <a href="https://www.youtube.com/@bnminstituteoftechnologyba6694"><span class="fab fa-youtube"></span></a>
-          </div>
+          <p>Dr. B. S. Anil Kumar: 9844463770</p>
+          <p>Dr. K. N. N. Prasad: 9448736843</p>
+          <p>Dr. B. S. Prathibha: 9686466499</p>
+          <p>Dr. L. Venkata Reddy: 9448768850</p>
         </div>
       </div>
-
-      <div class="center box">
-        <h2>Address</h2>
+  
+      <!-- Registration and General Queries -->
+      <div class="box">
+        <h2>Registration Queries</h2>
         <div class="content">
-          <div class="place">
-            <span class="fas fa-map-marker-alt"></span>
-            <span class="text">27th Cross Rd BSK Stage II Bangalore</span>
-          </div>
-          <div class="phone">
-            <span class="fas fa-phone-alt"></span>
-            <span class="text">+91-80-26711781</span>
-          </div>
-          <div class="email">
-            <span class="fas fa-envelope"></span>
-            <span class="text">icasam2025@bnmit.in</span>
-          </div>
+          <p>Dr. Raghavendra N.: 9844550048</p>
+          <p>Dr. S. Balasaraswathy: 9538835130</p>
+          <p>Dr. Prashanth M. K.: 9448231937</p>
+          <p>Dr. N. P. Chandrashekara: 9448537975</p>
         </div>
       </div>
-
-      <div class="right box">
-        <h2>Contact us</h2>
+  
+      <!-- Contact Info and Social -->
+      <div class="box">
+        <h2>Contact Info</h2>
         <div class="content">
-          <form action="#">
-            <div class="email">
-              <div class="text">Email *</div>
-              <input type="email" required />
-            </div>
-            <div class="msg">
-              <div class="text">Message *</div>
-              <textarea rows="2" cols="25" required></textarea>
-            </div>
-            <div class="btn">
-              <button type="submit">Send</button>
-            </div>
-          </form>
+          <p><i class="fas fa-phone-alt"></i> +91-80-26711781</p>
+          <p><i class="fas fa-phone-alt"></i> +91-80-26711782</p>
+          <p><i class="fas fa-envelope"></i> icasam2025@bnmit.in</p>
+          <p><i class="fas fa-envelope"></i> bnmitprincipal@gmail.com</p>
         </div>
+      </div>
+      <div class="social box">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com/bnmitsocial"><span class="fab fa-facebook-f"></span>Facebook</a>
+        <a href="https://www.youtube.com/@bnminstituteoftechnologyba6694"><span class="fab fa-youtube">YouTube</span></a>
+        <a href="https://www.instagram.com/bnmitsocial/"><span class="fab fa-instagram"></span>Instagram</a>
+        <a href="https://www.linkedin.com/school/bnmit/posts/?feedView=all"><span class="fab fa-linkedin-in">Linkedin</span></a>
       </div>
     </div>
-    <div class="bottom">
-      <center>
-        <span class="credit">Created By <a href="">ICASAMBNM</a> |
-        </span>
-        <span class="far fa-copyright"></span><span> 2025 All rights reserved.</span>
-      </center>
+  
+    <!-- Bottom Credits -->
+    <div class="social box" style="display: flex;align-items: center;">
+      <h2>Website Developed By</h2>
+        <a href="https://in.linkedin.com/in/aniketh-vijay-55a45825a" target="_blank" style="color: #4fc3f7;"><span class="fab fa-linkedin-in"></span>Aniketh G V</a> <br>
+        <a href="https://www.linkedin.com/in/aravindkvishwanath/" target="_blank" style="color: #4fc3f7;"><span class="fab fa-linkedin-in"></span>Aravind K V</a> <br>
+        <a href="https://www.linkedin.com/in/sagarvir/" target="_blank" style="color: #4fc3f7;"><span class="fab fa-linkedin-in"></span>B S Sagarvir</a>
     </div>
+    <p style="font-size: 14px;display: flex;justify-content: center;">&copy; Copyright 2023 B. N. M. Institute of Technology, All rights reserved</p>
   </footer>
-
-
-  <!-- <script>
-    window.addEventListener('load', () => {
-      const preloader = document.getElementById('preloader');
-      preloader.classList.add('fade-out');
-      setTimeout(() => {
-        preloader.remove();
-      }, 1500); // Matches the transition duration in CSS
-    });
-  </script> -->
 
   <script src="js/index.js"></script>
   <script src="js/swiper-bundle.min.js"></script>

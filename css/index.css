@@ -7,7 +7,7 @@
 }
 body {
   background-color: #c1eef8;
-  padding-top: 80px;
+  padding-top: 90px;
   overflow-x: hidden;
 }
 
@@ -163,7 +163,7 @@ html, body {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 4;
   display: flex;
@@ -175,6 +175,7 @@ nav {
   padding: 8px 50px 0 100px;
   flex-wrap: wrap;
 }
+
 nav .logo {
   color: #fff;
   font-size: 35px;
@@ -417,5 +418,168 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+.conference-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #005792, #3d9df2);
+  padding: 20px 40px;
+  color: white;
+  flex-wrap: nowrap; /* Prevent stacking */
+  text-align: center;
+  gap: 10px;
+}
+
+.header-logo {
+  flex: 0 0 auto; /* Prevent logo from stretching */
+}
+
+.header-logo img {
+  height: 120px;
+  width: auto;
+  max-width: 100%;
+}
+
+.header-text {
+  flex: 1;
+  padding: 0 20px;
+  min-width: 0; /* Prevent overflow */
+}
+
+.header-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.3;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header-text p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* 🔽 Responsive Adjustment (keep row layout, shrink sizes) */
+@media (max-width: 768px) {
+  .conference-header {
+    padding: 15px 20px;
+  }
+
+  .header-logo img {
+    height: 60px;
+  }
+
+  .header-text h1 {
+    font-size: 14px;
+  }
+
+  .header-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .conference-header {
+    padding: 10px 10px;
+  }
+
+  .header-logo img {
+    height: 40px;
+  }
+
+  .header-text h1 {
+    font-size: 12px;
+  }
+
+  .header-text p {
+    font-size: 10px;
+  }
+}
+.about-section {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  padding: 60px 20px;
+  color: #333;
+}
+
+.auto-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  border-left: 6px solid #4fc3f7;
+  padding-left: 15px;
+}
+
+.about-content,
+.bengaluru-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.about-image,
+.bengaluru-image {
+  flex: 1 1 40%;
+}
+
+.about-image img,
+.bengaluru-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-text,
+.bengaluru-text {
+  flex: 1 1 55%;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-text p,
+.bengaluru-text p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.bengaluru-text ul {
+  padding-left: 20px;
+}
+
+.bengaluru-text ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content,
+  .bengaluru-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image,
+  .bengaluru-image {
+    flex: 1 1 100%;
+  }
+
+  .about-text,
+  .bengaluru-text {
+    flex: 1 1 100%;
   }
 }
