@@ -37,6 +37,69 @@
             z-index: 1;
         }
 
+        .leadership-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .leadership-category {
+            flex: 1 1 48%;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .category-icon {
+            font-size: 28px;
+            margin-right: 10px;
+            color: #2c3e50;
+        }
+
+        .category-title {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .leadership-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .leadership-card {
+            text-align: center;
+        }
+
+        .leadership-photo img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .leadership-content h3 {
+            margin: 10px 0 5px;
+        }
+
+        .leadership-content p {
+            margin: 4px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .leadership-category {
+                flex: 1 1 100%;
+            }
+        }
 
         .container {
             max-width: 1200px;
@@ -151,7 +214,7 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
         } */
 
-         .leadership-category {
+        .leadership-category {
             width: 48%;
             margin-bottom: 60px;
             padding: 40px 30px;
@@ -163,7 +226,7 @@
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
-        } 
+        }
 
         .leadership-category:hover {
             transform: translateY(-10px);

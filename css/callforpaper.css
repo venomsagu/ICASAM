@@ -491,8 +491,40 @@ h3 {
     display: table-row;
   }
 
+  .topic-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .topic-list {
+    flex: 1 1 300px;
+    min-width: 280px;
+  }
+
+  .topic-list ol {
+    padding-left: 20px;
+  }
+
+  .topic-section ol li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topic-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
   .size {
-    height: 730vh !important;
+    height: 100vh !important;
   }
 
   .footer-distributed {
