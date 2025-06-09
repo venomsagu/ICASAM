@@ -20,49 +20,44 @@
 </head>
 
 <body>
-    <!-- <header>
-        <div class="header-content">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/BNMIT_Logo.png/320px-BNMIT_Logo.png" alt="BNMIT Logo" class="conference-logo">
-            <h1>ICASAM 2025 Committees</h1>
-            <p>Meet the distinguished members organizing the International Conference on Advanced Science and Applied Mathematics</p>
-        </div>
-    </header> -->
     <!-- navbar design -->
     <div id="preloader">
         <img src="images/loader.svg" class="loader">
     </div>
-    <nav>
-        <!-- Left Logo -->
-        <div class="nav-logo left">
-            <img src="images/2025/logo1.png" alt="logo">
-            <h4>BNM INSTITUTE OF TECHNOLOGY</h4>
-        </div>
-
-        <!-- Navigation Links -->
-        <input type="checkbox" id="click" />
-        <label for="click" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="index2.html">Committee</a></li>
-            <li><a href="timeline.html">Timeline</a></li>
-            <li><a href="call-for-papers.html">Submission</a></li>
-            <li><a href="#contact">Contact us</a></li>
-        </ul>
-
-        <!-- Right Logo -->
-        <div class="nav-logo right">
-            <h4>ICASAM</h4>
-            <img src="images/2025/icasam.png" alt="icasam logo">
-        </div>
-    </nav>
+    <!-- Conference Header -->
+  <div class="conference-header">
+    <div class="header-logo left">
+      <img src="images/2025/logo1.png" alt="Left Logo">
+    </div>
+    <div class="header-text">
+      <h1>International Conference on Applied Sciences and Advanced Materials</h1>
+      <p><strong style="font-family: 'Times New Roman', Times, serif;">Venue:</strong> BNMIT, Bengaluru | <strong style="font-family: 'Times New Roman', Times, serif;">Date:</strong> November 28–29, 2025</p>
+    </div>
+    <div class="header-logo right">
+      <img src="images/2025/icasam.png" alt="Right Logo">
+    </div>
+  </div>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <input type="checkbox" id="click">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="index2.html">Committee</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="call-for-papers.html">Submission</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ul>
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+  </nav>
 
     <div class="container">
         <!-- Leadership Section -->
         <section class="leadership-section">
             <!-- Chief Patron -->
-            <div style="display: flex;flex-wrap: wrap; justify-content: space-between;">
+            <div style="display: flex;flex-wrap: wrap; justify-content: space-between;" class="leadership-container">
                 <div class="leadership-category chief-patron">
                     <div class="category-header">
                         <div class="category-icon">
@@ -977,6 +972,38 @@
             <p>Powered by © ICASAM 2025. All rights reserved.</p>
         </div>
     </footer> -->
+    <script>
+        // First make sure preloader is visible
+        document.addEventListener('DOMContentLoaded', function() {
+          const preloader = document.getElementById('preloader');
+          preloader.style.opacity = '1';
+          preloader.style.visibility = 'visible';
+        });
+      
+        // Then handle the fade out
+        window.addEventListener('load', function() {
+          const preloader = document.getElementById('preloader');
+          
+          // Start fade out
+          preloader.classList.add('fade-out');
+          
+          // Remove after transition completes
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 1500); // Must match CSS transition time
+        });
+      
+        // Fallback in case load event doesn't fire
+        setTimeout(function() {
+          const preloader = document.getElementById('preloader');
+          if(preloader && !preloader.classList.contains('fade-out')) {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 1500);
+          }
+        }, 10000); // Absolute maximum 10 seconds
+      </script>
 </body>
 
 </html>

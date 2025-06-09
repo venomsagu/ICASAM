@@ -1,156 +1,129 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
 footer {
   font-family: "Poppins", sans-serif !important;
+  background: linear-gradient(135deg, #0d1117, #010409); /* Elegant black gradient */
   color: #d9d9d9;
-  bottom: 0px;
   width: 100%;
-  background: #111;
-}
-.main-content {
-  margin-top: 80px;
-  display: flex;
-}
-.main-content .box {
-  flex-basis: 50%;
-  padding: 24px 20px;
-}
-.box h2 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.box .content {
-  margin: 20px 0 0 0;
+  padding: 40px 20px;
   position: relative;
+  z-index: 1;
 }
-.box .content:before {
-  position: absolute;
-  content: "";
-  top: -10px;
-  height: 2px;
-  width: 100%;
-  background: #1a1a1a;
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
 }
-.box .content:after {
-  position: absolute;
-  content: "";
-  height: 2px;
-  width: 15%;
-  background: #f12020;
-  top: -10px;
+
+.box {
+  flex: 1 1 250px;
+  padding: 20px;
 }
-.left .content p {
-  text-align: justify;
+
+.box h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #4fc3f7; /* Light blue */
+  border-bottom: 2px solid #4fc3f7;
+  padding-bottom: 5px;
 }
-.left .content .social {
-  margin: 20px 0 0 0;
-}
-.left .content .social a {
-  padding: 0 2px;
-}
-.left .content .social a span {
-  height: 40px;
-  width: 40px;
-  background: #1a1a1a;
-  line-height: 40px;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
+
+.box .content p,
+.box .content a {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #d0d0d0;
   transition: 0.3s;
 }
-.left .content .social a span:hover {
-  background: #f12020;
+
+.box .content a:hover,
+.box .content p:hover {
+  color: #4fc3f7;
+  transform: translateX(5px);
 }
-.center .content .fas {
-  font-size: 1.4375rem;
-  background: #1a1a1a;
-  height: 45px;
-  width: 45px;
-  line-height: 45px;
-  text-align: center;
-  border-radius: 50%;
+
+.social {
+  flex: 1 1 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d0d0d0;
+  font-size: 0.95rem;
   transition: 0.3s;
-  cursor: pointer;
-}
-.center .content .fas:hover {
-  background: #f12020;
-}
-.center .content .text {
-  font-size: 1.0625rem;
-  font-weight: 500;
-  padding-left: 10px;
-}
-.center .content .phone {
-  margin: 15px 0;
-}
-.right form .text {
-  font-size: 1.0625rem;
-  margin-bottom: 2px;
-  color: #656565;
-}
-.right form .msg {
-  margin-top: 10px;
-}
-.right form input,
-.right form textarea {
-  width: 100%;
-  font-size: 1.0625rem;
-  background: #151515;
-  padding-left: 10px;
-  border: 1px solid #222222;
-}
-.right form input:focus,
-.right form textarea:focus {
-  outline-color: #3498db;
-}
-.right form input {
-  height: 35px;
-}
-.right form .btn {
-  margin-top: 10px;
-}
-.right form .btn button {
-  height: 40px;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: #f12020;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.right form .btn button:hover {
-  background: rgb(153, 129, 129);
-}
-.bottom center {
-  padding: 5px;
-  font-size: 0.9375rem;
-  background: #151515;
-}
-.bottom center span {
-  color: #656565;
-}
-.bottom center a {
-  color: #f12020;
   text-decoration: none;
 }
-.bottom center a:hover {
+
+.social a:hover {
+  color: #4fc3f7;
+  transform: translateX(5px);
+}
+
+.social a span {
+  font-size: 1.2rem;
+}
+
+/* Developer section */
+footer .developer {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+footer .developer h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer .developer p a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #4fc3f7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer .developer p a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
-@media screen and (max-width: 900px) {
-  .right form .btn button {
-    width: 100%;
-  }
-  footer {
-    position: relative;
-    bottom: 0px;
-  }
+
+footer .developer p:last-child {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
   .main-content {
-    flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
-  .main-content .box {
-    margin: 5px 0;
+
+  .box,
+  .social {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .box .content p,
+  .box .content a {
+    text-align: center;
+  }
+
+  .social a {
+    justify-content: center;
   }
 }
