@@ -967,7 +967,38 @@
             </div>
         </section>
     </div>
+<script>
+  // First make sure preloader is visible
+  document.addEventListener('DOMContentLoaded', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '1';
+    preloader.style.visibility = 'visible';
+  });
 
+  // Then handle the fade out
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    
+    // Start fade out
+    preloader.classList.add('fade-out');
+    
+    // Remove after transition completes
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 1500); // Must match CSS transition time
+  });
+
+  // Fallback in case load event doesn't fire
+  setTimeout(function() {
+    const preloader = document.getElementById('preloader');
+    if(preloader && !preloader.classList.contains('fade-out')) {
+      preloader.classList.add('fade-out');
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1500);
+    }
+  }, 10000); // Absolute maximum 10 seconds
+</script>
     <!-- <footer class="footer">
         <div class="footer-content">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/BNMIT_Logo.png/320px-BNMIT_Logo.png" alt="BNMIT Logo" class="footer-logo">
