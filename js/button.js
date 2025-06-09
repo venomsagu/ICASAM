@@ -8,15 +8,11 @@ const initTimer = () => {
   }
   let timer = downloadBtn.dataset.timer;
   downloadBtn.classList.add("timer");
-  downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`;
+  downloadBtn.innerHTML = `Starting Download!!`;
   const initCounter = setInterval(() => {
-    if (timer > 0) {
-      timer--;
-      return (downloadBtn.innerHTML = `Your download will begin in <b>${timer}</b> seconds`);
-    }
     clearInterval(initCounter);
     location.href = fileLink;
-    downloadBtn.innerText = "Your file is downloading...";
+    downloadBtn.innerText = "Download complete!!";
     setTimeout(() => {
       downloadBtn.classList.replace("timer", "disable-timer");
       downloadBtn.innerHTML = `<span class="icon material-symbols-rounded">vertical_align_bottom</span>
